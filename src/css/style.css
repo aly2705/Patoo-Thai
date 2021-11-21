@@ -189,6 +189,9 @@ body {
   margin-top: 5rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 31.25em) {
+    .slider {
+      min-height: 65rem; } }
   .slider__btn {
     border: none;
     outline: none;
@@ -236,7 +239,8 @@ body {
     transition: transform 0.8s; }
     @media only screen and (max-width: 31.25em) {
       .slider__card {
-        width: 36rem; } }
+        width: 36rem;
+        height: 60rem; } }
     .slider__card > * {
       margin-bottom: 3rem; }
     .slider__card svg {

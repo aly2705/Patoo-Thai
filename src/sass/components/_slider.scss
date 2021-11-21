@@ -8,6 +8,10 @@
   position: relative;
   overflow: hidden;
 
+  @include respond(phone-small) {
+    min-height: 65rem;
+  }
+
   &__btn {
     @include default-button-reset;
     background-color: transparent;
@@ -72,6 +76,7 @@
 
     @include respond(phone-small) {
       width: 36rem;
+      height: 60rem;
     }
 
     & > * {
