@@ -1,0 +1,126 @@
+.slider {
+  min-height: 55rem;
+  min-width: 100%;
+
+  margin: 0 auto;
+  margin-top: 5rem;
+
+  position: relative;
+  overflow: hidden;
+
+  &__btn {
+    @include default-button-reset;
+    background-color: transparent;
+    z-index: 10;
+    position: absolute;
+    top: 48%;
+    display: block;
+    transform: scale(1.02);
+    transition: all 0.3s;
+
+    svg {
+      height: 5rem;
+      width: 5rem;
+      fill: $color-grey-dark-1;
+    }
+
+    &--to-left {
+      left: 0;
+
+      svg {
+        margin-left: 1rem;
+      }
+    }
+
+    &--to-right {
+      right: 0;
+
+      svg {
+        margin-right: 1rem;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      svg {
+        fill: darken($color-grey-dark-1, 10%);
+      }
+    }
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 43rem;
+    height: 50rem;
+    padding: 3rem 6rem;
+    background-color: rgba($color-grey-dark-2, 0.7);
+    color: $color-grey-light-2;
+    border-radius: 1px;
+    text-align: left;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 5;
+
+    transition: transform 0.8s;
+
+    @include respond(phone-small) {
+      width: 36rem;
+    }
+
+    & > * {
+      margin-bottom: 3rem;
+    }
+
+    svg {
+      width: 6rem;
+      height: 6rem;
+      fill: $color-primary-dark;
+    }
+
+    &--1 {
+      transform: translate(calc(-250% - 6rem), 0);
+    }
+    &--2 {
+      transform: translate(calc(-150% - 3rem), 0.75rem);
+    }
+    &--3 {
+      transform: translate(-50%, 1.5rem);
+    }
+    &--4 {
+      transform: translate(calc(50% + 3rem), 0.75rem);
+    }
+    &--5 {
+      transform: translate(calc(150% + 6rem), 0);
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+  &__card-paragraph {
+    flex: 1;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+  &__person-img {
+    border-radius: 50%;
+    width: 25%;
+    margin-right: 1.25rem;
+  }
+  &__person-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $color-grey-light-2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+}

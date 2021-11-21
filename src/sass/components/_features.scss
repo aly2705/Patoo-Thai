@@ -1,0 +1,43 @@
+.features {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-auto-rows: minmax(20rem, min-content);
+  grid-column-gap: 6rem;
+  grid-row-gap: 6rem;
+
+  &__box {
+    background-color: rgba($color-grey-light-2, 0.8);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__feature-icon {
+    svg {
+      width: 5rem;
+      height: 5rem;
+      fill: $color-primary-dark;
+    }
+  }
+  &__feature-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__description {
+    color: $color-grey-dark-3;
+    text-align: center;
+  }
+}

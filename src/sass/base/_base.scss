@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////
+// BASE
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-land-small) {
+    font-size: 50%;
+  }
+
+  @include respond(phone-small) {
+    font-size: 45%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-grey-light-1;
+}

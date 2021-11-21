@@ -14,7 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/css/style.css" />
-    <script defer src="../src/js/script.js"></script>
+    <!-- <script defer src="../src/js/reservations.js"></script> -->
     <title>Patoo Thai | Reservations</title>
   </head>
   <body>
@@ -54,13 +54,80 @@
           </div>
         </div>
       </nav>
-      <div class="hero">
+      <div class="hero hero--reservations">
         <h1 class="heading-1">Reservations</h1>
         <h4 class="heading-4 u-margin-top-medium">
           Book your table online and prepare for your thai experience
         </h4>
       </div>
     </header>
+    <section class="section__reservation-form">
+      <form class="reservations">
+        <input
+          type="text"
+          placeholder="Name"
+          required
+          class="reservations__input reservations__name"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          class="reservations__input reservations__email"
+        />
+        <label class="reservations__date-label">Pick a date</label>
+        <input
+          type="text"
+          placeholder="MM"
+          class="reservations__input reservations__month"
+        />
+        <input
+          type="text"
+          placeholder="DD"
+          class="reservations__input reservations__day"
+        />
+        <input
+          type="text"
+          placeholder="YYYY"
+          class="reservations__input reservations__year"
+        />
+        <label class="reservations__time-label">Pick a time</label>
+        <input
+          type="text"
+          placeholder="09"
+          class="reservations__input reservations__hour"
+        />
+        <input
+          type="text"
+          placeholder="00"
+          class="reservations__input reservations__min"
+        />
+        <select class="reservations__select reservations__time-of-day">
+          <option value="AM" class="reservations__am">AM</option>
+          <option value="PM" class="reservations__am">PM</option>
+        </select>
+        <div class="reservations__people">
+          <button
+            type="button"
+            class="reservations__btn reservations__btn--minus"
+          >
+            &minus;
+          </button>
+          <label class="reservations__people-label"
+            ><span class="reservations__people-number">4</span> people</label
+          >
+          <button
+            type="button"
+            class="reservations__btn reservations__btn--plus"
+          >
+            &plus;
+          </button>
+        </div>
+        <button type="submit" class="reservations__btn-submit">
+          Make reservation
+        </button>
+      </form>
+    </section>
     <footer class="footer">
       <ul class="footer__list">
         <li class="footer__item">
@@ -69,7 +136,14 @@
         <li class="footer__item">
           <a href="findUs.html" class="footer__link">Program</a>
         </li>
-        <li class="footer__item"><a href="#" class="footer__link">Menu</a></li>
+        <li class="footer__item">
+          <a
+            href="http://127.0.0.1:8080/pdfjs/web/viewer.html?file=http://127.0.0.1:8080/src/pdf/patoo-menu.pdf"
+            target="_blank"
+            class="footer__link"
+            >Menu</a
+          >
+        </li>
         <li class="footer__item">
           <a
             href="https://deliveroo.co.uk/menu/sheffield/ecclesall-road/patoo-thai"

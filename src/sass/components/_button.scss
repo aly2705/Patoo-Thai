@@ -1,0 +1,38 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-grey-light-1;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba($color-primary-dark, 0.8);
+      transform: scale(1.03);
+    }
+  }
+  &--hero {
+    padding: 1.4rem 2rem;
+    font-weight: 300;
+    outline: 1px solid rgba($color-grey-light-3, 0.5);
+    outline-offset: 8px;
+    background-color: rgba($color-primary, 0.8);
+    transform: scale(1);
+
+    @include respond(phone) {
+      transform: scale(0.85);
+    }
+  }
+
+  &--section {
+    padding: 1.4rem 2rem;
+    font-weight: 700;
+    background-color: rgba($color-primary-dark, 0.8);
+    transform: scale(1);
+  }
+}

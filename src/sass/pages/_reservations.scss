@@ -1,0 +1,43 @@
+// overrides the hero in layout/header
+.hero {
+  &--reservations {
+    justify-self: start;
+    align-self: center;
+    margin-left: 10rem;
+    margin-top: -4rem;
+    width: 40%;
+    text-align: left;
+
+    @include respond(tab-land) {
+      width: 30%;
+      margin-left: 8rem;
+    }
+    @include respond(tab-land-small) {
+      width: 75%;
+      margin: 0;
+      justify-self: center;
+      text-align: center;
+    }
+    @include respond(phone) {
+      width: 90%;
+    }
+    @include respond(phone-small) {
+      width: 95%;
+    }
+  }
+}
+
+.section {
+  &__reservation-form {
+    position: relative;
+
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land-small) {
+      position: static;
+    }
+  }
+}
