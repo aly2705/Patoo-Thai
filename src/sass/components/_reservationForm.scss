@@ -45,6 +45,7 @@
   max-width: 50rem;
   grid-template-rows: repeat(6, 5rem);
   grid-row-gap: 1.8rem;
+  transition: all 0.3s;
   @include grid-column-pattern;
 
   @include respond(tab-land) {
@@ -196,5 +197,28 @@
     @include on-focus-form-element;
 
     border-bottom: 3px solid $color-grey-dark-4;
+  }
+
+  &__msg {
+    grid-column: 1/-1;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    transition: all 0.3s;
+
+    svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: #000;
+      transform: translateY(5px);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__error-message {
+    background-color: lighten($color-primary-dark, 7%);
+  }
+  &__validation-message {
+    background-color: #69db7c;
   }
 }

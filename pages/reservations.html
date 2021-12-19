@@ -14,7 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/css/style.css" />
-    <!-- <script defer src="../src/js/reservations.js"></script> -->
+    <script defer src="../src/js/script.js"></script>
     <title>Patoo Thai | Reservations</title>
   </head>
   <body>
@@ -68,41 +68,51 @@
           placeholder="Name"
           required
           class="reservations__input reservations__name"
+          name="name"
         />
         <input
           type="email"
           placeholder="Email"
           required
           class="reservations__input reservations__email"
+          name="email"
         />
         <label class="reservations__date-label">Pick a date</label>
         <input
           type="text"
           placeholder="MM"
+          name="month"
           class="reservations__input reservations__month"
         />
         <input
           type="text"
           placeholder="DD"
+          name="day"
           class="reservations__input reservations__day"
         />
         <input
           type="text"
           placeholder="YYYY"
+          name="year"
           class="reservations__input reservations__year"
         />
         <label class="reservations__time-label">Pick a time</label>
         <input
           type="text"
           placeholder="09"
+          name="hour"
           class="reservations__input reservations__hour"
         />
         <input
           type="text"
           placeholder="00"
+          name="min"
           class="reservations__input reservations__min"
         />
-        <select class="reservations__select reservations__time-of-day">
+        <select
+          class="reservations__select reservations__time-of-day"
+          name="time"
+        >
           <option value="AM" class="reservations__am">AM</option>
           <option value="PM" class="reservations__am">PM</option>
         </select>
@@ -110,22 +120,39 @@
           <button
             type="button"
             class="reservations__btn reservations__btn--minus"
+            data-operation="-"
           >
             &minus;
           </button>
-          <label class="reservations__people-label"
+          <label class="reservations__people-label" name="people"
             ><span class="reservations__people-number">4</span> people</label
           >
           <button
             type="button"
             class="reservations__btn reservations__btn--plus"
+            data-operation="+"
           >
             &plus;
           </button>
         </div>
+
         <button type="submit" class="reservations__btn-submit">
           Make reservation
         </button>
+        <!-- <div class="reservations__msg reservations__error-message">
+          <svg>
+            <use xlink:href="../src/img/icons.svg#icon-warning"></use>
+          </svg>
+          <span
+            >Reservation failed! The time that you have chosen is outside our working hours</span
+          >
+        </div> -->
+        <!-- <div class="reservations__msg reservations__validation-message">
+          <svg>
+            <use xlink:href="../src/img/icons.svg#icon-checkmark"></use>
+          </svg>
+          <span>You have successfully made your reservation! </span>
+        </div> -->
       </form>
     </section>
     <footer class="footer">

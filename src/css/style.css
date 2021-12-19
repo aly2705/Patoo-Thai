@@ -367,6 +367,7 @@ body {
   max-width: 50rem;
   grid-template-rows: repeat(6, 5rem);
   grid-row-gap: 1.8rem;
+  transition: all 0.3s;
   grid-template-columns: 7rem 1fr 7rem 7rem 7rem;
   grid-column-gap: 1.5rem; }
   @media only screen and (max-width: 37.5em) {
@@ -517,6 +518,22 @@ body {
     outline: none;
     transform: translateY(-3px);
     border-bottom: 3px solid #868e96; }
+  .reservations__msg {
+    grid-column: 1/-1;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    transition: all 0.3s; }
+    .reservations__msg svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: #000;
+      transform: translateY(5px);
+      margin-right: 0.5rem; }
+  .reservations__error-message {
+    background-color: #fd9137; }
+  .reservations__validation-message {
+    background-color: #69db7c; }
 
 .header {
   width: 100%;
@@ -621,7 +638,7 @@ body {
     height: 3rem;
     width: 4rem; }
     .navigation__icon::before {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       top: 30%;
@@ -631,7 +648,7 @@ body {
       border-radius: 1rem;
       transition: all 0.4s; }
     .navigation__icon::after {
-      content: "";
+      content: '';
       display: inline-block;
       position: absolute;
       top: 70%;
@@ -682,7 +699,7 @@ body {
         .navigation__grid-cell--link:link, .navigation__grid-cell--link:visited, .navigation__grid-cell {
           font-size: 3.2rem; } }
       .navigation__grid-cell--link:link::before, .navigation__grid-cell--link:visited::before, .navigation__grid-cell::before {
-        content: "";
+        content: '';
         display: inline-block;
         position: absolute;
         top: 0;
@@ -692,7 +709,7 @@ body {
         background-color: #fff;
         transition: all 0.3s; }
       .navigation__grid-cell--link:link::after, .navigation__grid-cell--link:visited::after, .navigation__grid-cell::after {
-        content: "";
+        content: '';
         display: inline-block;
         position: absolute;
         top: 98%;
@@ -763,11 +780,11 @@ body {
     .navigation__checkbox:checked ~ .navigation__grid .navigation__grid-cell--3 {
       animation: show-1 1s ease-in; }
     .navigation__checkbox:checked ~ .navigation__grid .navigation__grid-cell--4 {
-      animation: show-2 2s ease-in; }
+      animation: show-2 1.5s ease-in; }
     .navigation__checkbox:checked ~ .navigation__grid .navigation__grid-cell--1 {
-      animation: show-2 2s ease-in; }
+      animation: show-2 1.5s ease-in; }
     .navigation__checkbox:checked ~ .navigation__grid .navigation__grid-cell--2 {
-      animation: show-3 3s ease-in; }
+      animation: show-3 2s ease-in; }
 
 .section {
   padding: 8rem; }
