@@ -1,0 +1,14 @@
+.program {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: baseline;
+  line-height: 1.7;
+  grid-column-gap: 0.5rem;
+
+  &__meal {
+    grid-column: 1 / 2;
+  }
+  &__meal-time {
+    grid-column: 2 / 3;
+  }
+}

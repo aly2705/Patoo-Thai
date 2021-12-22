@@ -1,0 +1,44 @@
+.find {
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5rem;
+    grid-column-gap: 7rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+    @include respond(phone) {
+      padding: 5rem;
+    }
+  }
+
+  &__map {
+    grid-column: 2/-1;
+    grid-row: 1 / 3;
+    width: 100%;
+    background-color: darken($color-grey-light-6, 8%);
+
+    @include respond(tab-port) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      min-height: 45rem;
+    }
+  }
+  &__box {
+    grid-column: 1 / 2;
+    background-color: darken($color-grey-light-6, 8%);
+    font-weight: 600;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      fill: $color-primary-dark;
+      height: 5.5rem;
+      width: 5.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+}

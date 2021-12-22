@@ -14,6 +14,17 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <script defer src="../src/js/script.js"></script>
     <title>Patoo Thai | Find Us</title>
   </head>
@@ -29,28 +40,39 @@
             <div class="navigation__icon"></div>
           </label>
           <div class="navigation__grid">
-            <div class="navigation__grid-cell navigation__grid-cell--1">
-              <a
-                href="../index.html"
+            <a
+              href="../index.html"
+              class="navigation__grid-cell navigation__grid-cell--1"
+            >
+              <span
                 class="navigation__grid-cell--link navigation__grid-cell--link1"
-                ><strong>About Us</strong></a
+                ><strong>About Us</strong></span
               >
-            </div>
-            <div class="navigation__grid-cell navigation__grid-cell--2">
-              <a href="reservations.html" class="navigation__grid-cell--link"
-                ><strong>Reservations</strong></a
+            </a>
+            <a
+              href="reservations.html"
+              class="navigation__grid-cell navigation__grid-cell--2"
+            >
+              <span class="navigation__grid-cell--link"
+                ><strong>Reservations</strong></span
               >
-            </div>
-            <div class="navigation__grid-cell navigation__grid-cell--3">
-              <a href="findUs.html" class="navigation__grid-cell--link"
-                ><strong>Find Us</strong></a
+            </a>
+            <a
+              href="findUs.html"
+              class="navigation__grid-cell navigation__grid-cell--3"
+            >
+              <span class="navigation__grid-cell--link"
+                ><strong>Find Us</strong></span
               >
-            </div>
-            <div class="navigation__grid-cell navigation__grid-cell--4">
-              <a href="contact.html" class="navigation__grid-cell--link"
-                ><strong>Contact</strong></a
+            </a>
+            <a
+              href="contact.html"
+              class="navigation__grid-cell navigation__grid-cell--4"
+            >
+              <span class="navigation__grid-cell--link"
+                ><strong>Contact</strong></span
               >
-            </div>
+            </a>
           </div>
         </div>
       </nav>
@@ -61,6 +83,31 @@
         </h4>
       </div>
     </header>
+    <main>
+      <section class="section find__section">
+        <div class="find__box find__box--location">
+          <svg class="find__icon">
+            <use xlink:href="../src/img/icons.svg#icon-location"></use>
+          </svg>
+          <div class="find__description">
+            Patoo Thai is at 607 - 609 Ecclesall Road, Sheffield S11 8PT.
+          </div>
+        </div>
+        <div class="find__box find__box--program">
+          <svg class="find__icon">
+            <use xlink:href="../src/img/icons.svg#icon-clock"></use>
+          </svg>
+          <div class="find__description program">
+            <span class="program__meal">Lunchtime: </span>
+            <span class="program__meal-time">MON-SUN 12:00 AM - 2:30 PM</span>
+            <span class="program__meal">Dinner: </span>
+            <span class="program__meal-time">SUN-THU 18:00 PM - 22:30 PM</span>
+            <span class="program__meal-time">FRI-SAT 18:00 PM - 23:30 PM</span>
+          </div>
+        </div>
+        <div class="find__map" id="map"></div>
+      </section>
+    </main>
     <footer class="footer">
       <ul class="footer__list">
         <li class="footer__item">

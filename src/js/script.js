@@ -16,6 +16,9 @@ const btnSubmit = document.querySelector('.reservations__btn-submit');
 const resForm = document.querySelector('.reservations');
 const reservations = new Array(); // not kept in local storage as, after inserting a reservation, i don't need the data anymore in the app
 
+//FIND US
+const map = document.querySelector('#map');
+
 /////////////////////////////////////////////////////////////////////
 // OOP ARCHITECTURE -> I have chosen to structure my JS code in ES6 classes
 class Reservation {
@@ -142,7 +145,12 @@ class Reservation {
 }
 
 class App {
+  _patooLat = 53.368248;
+  _patooLng = -1.499549;
+  _mapZoom = 17;
+  _map;
   constructor() {
+    this._loadMap();
     //Attach event handlers
     btnRight?.addEventListener('click', this._slideToRight.bind(this));
     btnLeft?.addEventListener('click', this._slideToLeft.bind(this));
@@ -255,6 +263,23 @@ class App {
     console.log(data);
     new Reservation(data);
     console.log(reservations);
+  }
+
+  //MAP METHODS
+  _loadMap() {
+    if (!map) return;
+
+    this._map = L.map('map').setView(
+      [this._patooLat, this._patooLng],
+      this._mapZoom
+    );
+
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(this._map);
+
+    L.marker([this._patooLat, this._patooLng]).addTo(this._map);
   }
 }
 
