@@ -107,6 +107,7 @@
 
     &--active {
       opacity: 1;
+      box-shadow: 0.5rem 1rem 3rem rgba(#000, 0.2);
     }
   }
   &__card-paragraph {

@@ -57,7 +57,8 @@
     position: static;
     transform: translate(0, 0);
     margin: 8rem auto;
-    background-color: darken($color-grey-light-6, 8%);
+    box-shadow: 0.5rem 1rem 3rem rgba(#000, 0.2);
+    background-color: rgba($color-grey-light-2, 0.8);
     padding: 5rem 7rem;
   }
 

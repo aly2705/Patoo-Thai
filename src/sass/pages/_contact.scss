@@ -1,0 +1,67 @@
+.section {
+  &__contact {
+    margin-top: 0;
+
+    @include respond(phone-small) {
+      padding: 5rem;
+    }
+  }
+  &__form {
+    padding-top: 0;
+
+    @include respond(phone-small) {
+      padding: 5rem;
+    }
+  }
+}
+.contact {
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.9) 0%,
+      rgba(#fff, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/gal-6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 1.5rem 4rem rgba(#000, 0.2);
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.8) 0%,
+        rgba(#fff, 0.8) 60%,
+        transparent 60%
+      ),
+      url(../img/gal-6.jpg);
+  }
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.8) 0%,
+        rgba(#fff, 0.8) 100%,
+        transparent 100%
+      ),
+      url(../img/gal-6.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 5.5rem;
+
+    @include respond(tab-port) {
+      width: 60%;
+    }
+    @include respond(phone) {
+      width: 100%;
+      padding: 4.5rem;
+    }
+  }
+
+  &__heading {
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+  }
+}
