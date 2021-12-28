@@ -1,6 +1,5 @@
 //////////////////////////////////////////////////////
 //SECTIONS LAYOUT
-
 .section {
   padding: 8rem;
 
@@ -21,20 +20,6 @@
       grid-template-rows: auto 7rem 7rem;
       padding: 6rem 5.5rem;
     }
-  }
-
-  &__features {
-    display: grid;
-    justify-items: center;
-    background-image: linear-gradient(
-        to right,
-        rgba($color-grey-dark-2, 0.8),
-        rgba($color-grey-dark-2, 0.8)
-      ),
-      url(../img/img-features.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &__delivery {
@@ -70,8 +55,56 @@
       }
     }
   }
+  &__features {
+    display: grid;
+    justify-items: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
+//////////////////////////////////////////////
+//FEATURES WEBP SUPPORT FOR BACKGROUND IMAGES
+.no-webp .section__features {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-grey-dark-2, 0.8),
+      rgba($color-grey-dark-2, 0.8)
+    ),
+    url(../img/img-13-small.jpg);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 120em) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-grey-dark-2, 0.8),
+        rgba($color-grey-dark-2, 0.8)
+      ),
+      url(../img/img-13.jpg);
+  }
+}
+
+.webp .section__features {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-grey-dark-2, 0.8),
+      rgba($color-grey-dark-2, 0.8)
+    ),
+    url(../img/img-13-small.webp);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 120em) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-grey-dark-2, 0.8),
+        rgba($color-grey-dark-2, 0.8)
+      ),
+      url(../img/img-13.webp);
+  }
+}
+
+///////////////////////////////////
+//ABOUT & DELIVERY GRIDS
 .about,
 .delivery {
   &__img {

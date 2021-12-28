@@ -15,36 +15,10 @@
   }
 }
 .contact {
-  background-image: linear-gradient(
-      105deg,
-      rgba(#fff, 0.9) 0%,
-      rgba(#fff, 0.9) 50%,
-      transparent 50%
-    ),
-    url(../img/gal-6.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 1.5rem 4rem rgba(#000, 0.2);
-
-  @include respond(tab-port) {
-    background-image: linear-gradient(
-        105deg,
-        rgba(#fff, 0.8) 0%,
-        rgba(#fff, 0.8) 60%,
-        transparent 60%
-      ),
-      url(../img/gal-6.jpg);
-  }
-  @include respond(phone) {
-    background-image: linear-gradient(
-        105deg,
-        rgba(#fff, 0.8) 0%,
-        rgba(#fff, 0.8) 100%,
-        transparent 100%
-      ),
-      url(../img/gal-6.jpg);
-  }
 
   &__form {
     width: 50%;
@@ -63,5 +37,105 @@
     @include respond(phone) {
       font-size: 2.5rem;
     }
+  }
+}
+
+///////////////////////////////////////////////////////
+//CONTACT FORM WEBP SUPPORT AND RESPONSIVENESS
+.no-webp .contact {
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.9) 0%,
+      rgba(#fff, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/gal-6-small.jpg);
+
+  @media (min-resolution: 192dpi), (min-width: 120em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 50%,
+        transparent 50%
+      ),
+      url(../img/gal-6.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        100deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 60%,
+        transparent 60%
+      ),
+      url(../img/gal-6-small.jpg);
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          100deg,
+          rgba(#fff, 0.9) 0%,
+          rgba(#fff, 0.9) 60%,
+          transparent 60%
+        ),
+        url(../img/gal-6.jpg);
+    }
+  }
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 100%,
+        transparent 100%
+      ),
+      url(../img/gal-6-small.jpg);
+  }
+}
+
+.webp .contact {
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.9) 0%,
+      rgba(#fff, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/gal-6-small.webp);
+
+  @media (min-resolution: 192dpi), (min-width: 120em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 50%,
+        transparent 50%
+      ),
+      url(../img/gal-6.webp);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        100deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 60%,
+        transparent 60%
+      ),
+      url(../img/gal-6-small.webp);
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          100deg,
+          rgba(#fff, 0.9) 0%,
+          rgba(#fff, 0.9) 60%,
+          transparent 60%
+        ),
+        url(../img/gal-6.webp);
+    }
+  }
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 0%,
+        rgba(#fff, 0.9) 100%,
+        transparent 100%
+      ),
+      url(../img/gal-6-small.webp);
   }
 }

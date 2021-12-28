@@ -14,6 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../src/css/style.css" />
+    <script src="../src/js/modernizr.js"></script>
     <script defer src="../src/js/script.js"></script>
     <title>Patoo Thai | Contact Us</title>
   </head>
@@ -26,7 +27,7 @@
         <div class="navigation__btn-container">
           <input type="checkbox" id="grid-nav" class="navigation__checkbox" />
           <label for="grid-nav" class="navigation__btn">
-            <div class="navigation__icon"></div>
+            <span class="navigation__icon"></span>
           </label>
           <div class="navigation__grid">
             <a
@@ -75,6 +76,7 @@
     </header>
     <main>
       <section class="features section section__contact">
+        <h2 style="display: none">Contact details</h2>
         <div class="features__box">
           <div class="features__feature-icon">
             <svg>
@@ -118,6 +120,7 @@
         </div>
       </section>
       <section class="section section__form">
+        <h2 style="display: none">Contact Form</h2>
         <div class="contact">
           <div class="contact__form">
             <div class="u-margin-bottom-big">
@@ -145,7 +148,6 @@
               </div>
               <div class="form__group">
                 <textarea
-                  
                   class="form__input form__input--textarea"
                   id="message"
                   placeholder="Your message"
@@ -154,7 +156,7 @@
                 <label for="message" class="form__label">Your message</label>
               </div>
                 <button class="form__btn-submit">Send</button>
-          </div>
+            </form>
         </div>
       </section>
     </main>

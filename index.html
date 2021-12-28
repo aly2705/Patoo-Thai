@@ -11,6 +11,8 @@
 
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="src/css/style.css" />
+
+    <script src="src/js/modernizr.js"></script>
     <script defer src="src/js/script.js"></script>
     <title>Patoo Thai | Home</title>
   </head>
@@ -23,7 +25,7 @@
         <div class="navigation__btn-container">
           <input type="checkbox" id="grid-nav" class="navigation__checkbox" />
           <label for="grid-nav" class="navigation__btn">
-            <div class="navigation__icon"></div>
+            <span class="navigation__icon"></span>
           </label>
           <div class="navigation__grid">
             <a
@@ -78,16 +80,16 @@
         class="section section__about u-margin-top-big"
         id="section-about"
       >
-        <img
-          src="src/img/img-7.jpg"
-          alt="Food plate 1"
-          class="about__img about__img-1"
-        />
-        <img
-          src="src/img/img-9.jpg"
-          alt="Food plate 2"
-          class="about__img about__img-2"
-        />
+        <picture class="about__img about__img-1">
+          <source type="image/webp" srcset="src/img/img-7.webp" />
+          <source type="image/jpeg" srcset="src/img/img-7.jpg" />
+          <img style="width: 100%" src="src/img/img-7.jpg" alt="Food plate 1" />
+        </picture>
+        <picture class="about__img about__img-2">
+          <source type="image/webp" srcset="src/img/img-9.webp" />
+          <source type="image/jpeg" srcset="src/img/img-9.jpg" />
+          <img style="width: 100%" src="src/img/img-9.jpg" alt="Food plate 2" />
+        </picture>
         <div class="about__description">
           <h3 class="heading-3">A superb dining experience</h3>
           <h2 class="heading-2 heading-2--dark u-margin-top-v-small">
@@ -185,16 +187,24 @@
             >Download menu</a
           >
         </div>
-        <img
-          src="src/img/img-10.jpg"
-          alt="Take away food"
-          class="delivery__img delivery__img-1 delivery__img-1--right"
-        />
-        <img
-          src="src/img/img-11.jpg"
-          alt="Delivery guy"
-          class="delivery__img delivery__img-2 delivery__img-2--right"
-        />
+        <picture class="delivery__img delivery__img-1 delivery__img-1--right">
+          <source type="image/webp" srcset="src/img/img-10.webp" />
+          <source type="image/jpeg" srcset="src/img/img-10.jpg" />
+          <img
+            style="width: 100%"
+            src="src/img/img-10.jpg"
+            alt="Take away food photo"
+          />
+        </picture>
+        <picture class="delivery__img delivery__img-2 delivery__img-2--right">
+          <source type="image/webp" srcset="src/img/img-11.webp" />
+          <source type="image/jpeg" srcset="src/img/img-11.jpg" />
+          <img
+            style="width: 100%"
+            src="src/img/img-11.jpg"
+            alt="Delivery guy photo"
+          />
+        </picture>
       </section>
       <section class="section section__testimonials">
         <h3 class="heading-3 section__testimonials--heading">
@@ -241,11 +251,12 @@
               place if you haven't before.
             </p>
             <figure class="slider__person">
-              <img
-                src="src/img/person-1.jpg"
-                alt="Person 1 photo"
-                class="slider__person-img"
-              />
+              <picture class="slider__person-img">
+                <source type="image/webp" srcset="src/img/person-1.webp" />
+                <source type="image/jpeg" srcset="src/img/person-1.jpg" />
+                <img src="src/img/person-1.jpg" alt="Person 1 photo" />
+              </picture>
+
               <figcaption class="slider__person-name">Nina Miller</figcaption>
             </figure>
           </div>
@@ -261,11 +272,11 @@
               in Sheffield. Will always highly recommend!
             </p>
             <figure class="slider__person">
-              <img
-                src="src/img/person-2.jpg"
-                alt="Person 2 photo"
-                class="slider__person-img"
-              />
+              <picture class="slider__person-img">
+                <source type="image/webp" srcset="src/img/person-2.webp" />
+                <source type="image/jpeg" srcset="src/img/person-2.jpg" />
+                <img src="src/img/person-2.jpg" alt="Person 2 photo" />
+              </picture>
               <figcaption class="slider__person-name">
                 Jessica Chapman
               </figcaption>
@@ -286,11 +297,11 @@
               clean and covid safe! Highly recommend!
             </p>
             <figure class="slider__person">
-              <img
-                src="src/img/person-3.jpg"
-                alt="Person 3 photo"
-                class="slider__person-img"
-              />
+              <picture class="slider__person-img">
+                <source type="image/webp" srcset="src/img/person-3.webp" />
+                <source type="image/jpeg" srcset="src/img/person-3.jpg" />
+                <img src="src/img/person-3.jpg" alt="Person 3 photo" />
+              </picture>
               <figcaption class="slider__person-name">Martha Peck</figcaption>
             </figure>
           </div>
@@ -305,11 +316,11 @@
               professional. One of the best Thai places I’ve been to 👍
             </p>
             <figure class="slider__person">
-              <img
-                src="src/img/person-4.jpg"
-                alt="Person 4 photo"
-                class="slider__person-img"
-              />
+              <picture class="slider__person-img">
+                <source type="image/webp" srcset="src/img/person-4.webp" />
+                <source type="image/jpeg" srcset="src/img/person-4.jpg" />
+                <img src="src/img/person-4.jpg" alt="Person 4 photo" />
+              </picture>
               <figcaption class="slider__person-name">Ramon Berry</figcaption>
             </figure>
           </div>
@@ -323,107 +334,105 @@
               matter of fact. Price reasonable. Top drawer.
             </p>
             <figure class="slider__person">
-              <img
-                src="src/img/person-5.jpg"
-                alt="Person 5 photo"
-                class="slider__person-img"
-              />
+              <picture class="slider__person-img">
+                <source type="image/webp" srcset="src/img/person-5.webp" />
+                <source type="image/jpeg" srcset="src/img/person-5.jpg" />
+                <img src="src/img/person-5.jpg" alt="Person 5 photo" />
+              </picture>
               <figcaption class="slider__person-name">Willard Pena</figcaption>
             </figure>
           </div>
         </div>
       </section>
       <section class="section__gallery gallery">
+        <h2 class="heading-2" style="display: none">Gallery</h2>
         <figure class="gallery__item gallery__item--1">
-          <img
-            src="src/img/gal-7.jpg"
-            alt="Gallery photo 1"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-7.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-7.jpg" />
+            <img src="src/img/gal-7.jpg" alt="Gallery photo 1" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--2">
-          <img
-            src="src/img/gal-8.jpg"
-            alt="Gallery photo 2"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-8.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-8.jpg" />
+            <img src="src/img/gal-8.jpg" alt="Gallery photo 2" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--3">
-          <img
-            src="src/img/img-2.jpg"
-            alt="Gallery photo 3"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/img-2.webp" />
+            <source type="image/jpeg" srcset="src/img/img-2.jpg" />
+            <img src="src/img/img-2.jpg" alt="Gallery photo 3" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--4">
-          <img
-            src="src/img/gal-2.jpg"
-            alt="Gallery photo 4"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-2.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-2.jpg" />
+            <img src="src/img/gal-2.jpg" alt="Gallery photo 4" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--5">
-          <img
-            src="src/img/gal-5.jpg"
-            alt="Gallery photo 5"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-5.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-5.jpg" />
+            <img src="src/img/gal-5.jpg" alt="Gallery photo 5" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--6">
-          <img
-            src="src/img/gal-1.jpg"
-            alt="Gallery photo 6"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-1.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-1.jpg" />
+            <img src="src/img/gal-1.jpg" alt="Gallery photo 6" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--7">
-          <img
-            src="src/img/img-5.jpg"
-            alt="Gallery photo 7"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/img-5.webp" />
+            <source type="image/jpeg" srcset="src/img/img-5.jpg" />
+            <img src="src/img/img-5.jpg" alt="Gallery photo 7" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--8">
-          <img
-            src="src/img/img-award.jpg"
-            alt="Gallery photo 8"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/img-award.webp" />
+            <source type="image/jpeg" srcset="src/img/img-award.jpg" />
+            <img src="src/img/img-award.jpg" alt="Gallery photo 8" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--9">
-          <img
-            src="src/img/gal-4.jpg"
-            alt="Gallery photo 9"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-4.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-4.jpg" />
+            <img src="src/img/gal-4.jpg" alt="Gallery photo 9" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--10">
-          <img
-            src="src/img/img-4.jpg"
-            alt="Gallery photo 10"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/img-4.webp" />
+            <source type="image/jpeg" srcset="src/img/img-4.jpg" />
+            <img src="src/img/img-4.jpg" alt="Gallery photo 10" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--11">
-          <img
-            src="src/img/gal-6.jpg"
-            alt="Gallery photo 11"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/gal-6-vsmall.webp" />
+            <source type="image/jpeg" srcset="src/img/gal-6-vsmall.jpg" />
+            <img src="src/img/gal-6-vsmall.jpg" alt="Gallery photo 11" />
+          </picture>
         </figure>
         <figure class="gallery__item gallery__item--12">
-          <img
-            src="src/img/img-6.jpg"
-            alt="Gallery photo 12"
-            class="gallery__img"
-          />
+          <picture class="gallery__img">
+            <source type="image/webp" srcset="src/img/img-6-small.webp" />
+            <source type="image/jpeg" srcset="src/img/img-6-small.jpg" />
+            <img src="src/img/img-6-small.jpg" alt="Gallery photo 12" />
+          </picture>
         </figure>
       </section>
     </main>
-    <!--------------------------FOOTER---------------------------->
     <footer class="footer">
-      <!-- <img src="src/img/logo.png" alt="Logo" class="footer__logo" /> -->
-
       <ul class="footer__list">
         <li class="footer__item">
           <a href="#section-about" class="footer__link">About</a>

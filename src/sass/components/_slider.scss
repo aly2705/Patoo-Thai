@@ -118,9 +118,13 @@
     align-items: center;
   }
   &__person-img {
-    border-radius: 50%;
     width: 25%;
     margin-right: 1.25rem;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+    }
   }
   &__person-name {
     font-size: 1.8rem;

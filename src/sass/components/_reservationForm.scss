@@ -120,7 +120,7 @@
   &__btn-submit {
     grid-row: 6 / 7;
     grid-column: 1 / -1;
-    background-color: $color-primary-dark;
+    background-color: $color-primary;
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -222,7 +222,7 @@
   }
 
   &__error-message {
-    background-color: lighten($color-primary-dark, 7%);
+    background-color: lighten($color-primary, 7%);
   }
   &__validation-message {
     background-color: #69db7c;
