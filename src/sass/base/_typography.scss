@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
   font-family: $font-family;
@@ -9,7 +9,7 @@ body {
 }
 
 .logo {
-  font-family: "Pacifico", serif;
+  font-family: 'Pacifico', serif;
   font-size: 3.2rem;
   // font-style: italic;
   text-transform: capitalize;
@@ -59,7 +59,7 @@ body {
   text-transform: uppercase;
 }
 
-.heading-4 {
+.page-description {
   font-size: 2rem;
   font-weight: 300;
   color: $color-grey-light-3;

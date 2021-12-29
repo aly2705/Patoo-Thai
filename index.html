@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Patoo Thai is an award winning restaurant located in Sheffield, England. Book your table today and enjoy your own thai experience"
+    />
     <!-- <link
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
@@ -67,9 +71,9 @@
       </nav>
       <div class="hero">
         <h1 class="heading-1">Premium thai cuisine</h1>
-        <h4 class="heading-4 u-margin-top-medium">
+        <h2 class="page-description u-margin-top-medium">
           Award winning Sheffield Thai Restaurant
-        </h4>
+        </h2>
         <a href="pages/reservations.html" class="btn btn--hero u-margin-top-big"
           >Book a table</a
         >
@@ -83,12 +87,12 @@
         <picture class="about__img about__img-1">
           <source type="image/webp" srcset="src/img/img-7.webp" />
           <source type="image/jpeg" srcset="src/img/img-7.jpg" />
-          <img width="100%" src="src/img/img-7.jpg" alt="Food plate 1" />
+          <img style="width: 100%" src="src/img/img-7.jpg" alt="Food plate 1" />
         </picture>
         <picture class="about__img about__img-2">
           <source type="image/webp" srcset="src/img/img-9.webp" />
           <source type="image/jpeg" srcset="src/img/img-9.jpg" />
-          <img width="100%" src="src/img/img-9.jpg" alt="Food plate 2" />
+          <img style="width: 100%" src="src/img/img-9.jpg" alt="Food plate 2" />
         </picture>
         <div class="about__description">
           <h3 class="heading-3">A superb dining experience</h3>
@@ -191,7 +195,7 @@
           <source type="image/webp" srcset="src/img/img-10.webp" />
           <source type="image/jpeg" srcset="src/img/img-10.jpg" />
           <img
-            width="100%"
+            style="width: 100%"
             src="src/img/img-10.jpg"
             alt="Take away food photo"
           />
@@ -199,7 +203,11 @@
         <picture class="delivery__img delivery__img-2 delivery__img-2--right">
           <source type="image/webp" srcset="src/img/img-11.webp" />
           <source type="image/jpeg" srcset="src/img/img-11.jpg" />
-          <img width="100%" src="src/img/img-11.jpg" alt="Delivery guy photo" />
+          <img
+            style="width: 100%"
+            src="src/img/img-11.jpg"
+            alt="Delivery guy photo"
+          />
         </picture>
       </section>
       <section class="section section__testimonials">
@@ -219,6 +227,7 @@
         <div class="slider">
           <button
             class="slider__btn slider__btn--to-left"
+            aria-label="Slide to left"
             data-slide-to="1"
             data-direction="left"
           >
@@ -228,6 +237,7 @@
           </button>
           <button
             class="slider__btn slider__btn--to-right"
+            aria-label="Slide to right"
             data-slide-to="3"
             data-direction="right"
           >
@@ -250,11 +260,7 @@
               <picture class="slider__person-img">
                 <source type="image/webp" srcset="src/img/person-1.webp" />
                 <source type="image/jpeg" srcset="src/img/person-1.jpg" />
-                <img
-                  width="100%"
-                  src="src/img/person-1.jpg"
-                  alt="Person 1 photo"
-                />
+                <img src="src/img/person-1.jpg" alt="Person 1 photo" />
               </picture>
 
               <figcaption class="slider__person-name">Nina Miller</figcaption>
@@ -275,11 +281,7 @@
               <picture class="slider__person-img">
                 <source type="image/webp" srcset="src/img/person-2.webp" />
                 <source type="image/jpeg" srcset="src/img/person-2.jpg" />
-                <img
-                  width="100%"
-                  src="src/img/person-2.jpg"
-                  alt="Person 2 photo"
-                />
+                <img src="src/img/person-2.jpg" alt="Person 2 photo" />
               </picture>
               <figcaption class="slider__person-name">
                 Jessica Chapman
@@ -304,11 +306,7 @@
               <picture class="slider__person-img">
                 <source type="image/webp" srcset="src/img/person-3.webp" />
                 <source type="image/jpeg" srcset="src/img/person-3.jpg" />
-                <img
-                  width="100%"
-                  src="src/img/person-3.jpg"
-                  alt="Person 3 photo"
-                />
+                <img src="src/img/person-3.jpg" alt="Person 3 photo" />
               </picture>
               <figcaption class="slider__person-name">Martha Peck</figcaption>
             </figure>
@@ -327,11 +325,7 @@
               <picture class="slider__person-img">
                 <source type="image/webp" srcset="src/img/person-4.webp" />
                 <source type="image/jpeg" srcset="src/img/person-4.jpg" />
-                <img
-                  width="100%"
-                  src="src/img/person-4.jpg"
-                  alt="Person 4 photo"
-                />
+                <img src="src/img/person-4.jpg" alt="Person 4 photo" />
               </picture>
               <figcaption class="slider__person-name">Ramon Berry</figcaption>
             </figure>
@@ -349,11 +343,7 @@
               <picture class="slider__person-img">
                 <source type="image/webp" srcset="src/img/person-5.webp" />
                 <source type="image/jpeg" srcset="src/img/person-5.jpg" />
-                <img
-                  width="100%"
-                  src="src/img/person-5.jpg"
-                  alt="Person 5 photo"
-                />
+                <img src="src/img/person-5.jpg" alt="Person 5 photo" />
               </picture>
               <figcaption class="slider__person-name">Willard Pena</figcaption>
             </figure>
@@ -460,6 +450,7 @@
           <a
             href="http://www.patoothai.com/wp-content/uploads/2021/03/Patoo-Takeaway-Menu-2020-OFFICIAL-FINAL.pdf"
             target="_blank"
+            rel="noopener"
             class="footer__link"
             >Menu</a
           >
@@ -469,6 +460,7 @@
             href="https://deliveroo.co.uk/menu/sheffield/ecclesall-road/patoo-thai"
             class="footer__link"
             target="_blank"
+            rel="noopener"
             >Delivery</a
           >
         </li>
@@ -485,6 +477,8 @@
         <a
           href="https://twitter.com/search?vertical=default&q=patoo_thai&src=typd"
           target="_blank"
+          rel="noopener"
+          aria-label="Find us on Twitter"
         >
           <svg class="footer__icon">
             <use xlink:href="src/img/icons.svg#icon-twitter"></use>
@@ -493,6 +487,8 @@
         <a
           href="https://www.facebook.com/PatooThaiSheffield/?fref=ts"
           target="_blank"
+          rel="noopener"
+          aria-label="Find us on Facebook"
         >
           <svg class="footer__icon">
             <use xlink:href="src/img/icons.svg#icon-facebook"></use>
@@ -501,6 +497,8 @@
         <a
           href="https://www.tripadvisor.co.uk/Restaurant_Review-g186364-d2026143-Reviews-Patoo_Thai-Sheffield_South_Yorkshire_England.html"
           target="_blank"
+          rel="noopener"
+          aria-label="Find us on Tripadvisor"
         >
           <svg class="footer__icon">
             <use xlink:href="src/img/icons.svg#icon-tripadvisor"></use>
@@ -513,6 +511,7 @@
           href="https://alexandra-simion.netlify.app/"
           class="copyright__link"
           target="_blank"
+          rel="noopener"
           >Alexandra Simion</a
         >
       </p>
